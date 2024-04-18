@@ -7,7 +7,7 @@
     "start": "vite",
     "build": "vite build --base=/testScript/",
     "preview": "vite preview",
-		"push": "bash push.sh"
+		"p": "bash push.sh"
   },
   "devDependencies": {
     "vite": "^4.5.2",
