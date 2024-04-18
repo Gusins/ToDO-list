@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/vanilla-app-template/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+		"test": "./test.sh"
   },
   "devDependencies": {
     "vite": "^4.5.2",
@@ -17,5 +18,7 @@
   "dependencies": {
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
-  }
+  },
+  "description": "Этот проект был создан при помощи Vite. Для знакомства и настройки\r дополнительных возможностей [обратись к документации](https://vitejs.dev/).",
+  "main": "vite.config.js"
 }
