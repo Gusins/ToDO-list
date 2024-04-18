@@ -1,25 +1,71 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+.container {
+}
+body {
+	background-color: rgb(154, 235, 228);
+}
+.line {
+	border: 1px solid #36945a;
+}
+.form {
+	display: flex;
+	margin: 15px auto;
+	flex-wrap: nowrap;
+	max-width: 400px;
+	height: 40px;
+}
+.form_input {
+	flex-grow: 1;
+	border-radius: 4px;
+	border: 2px solid #000;
+	background-color: rgb(253, 255, 233);
+}
+.btn {
+	background-color: red;
+	color: antiquewhite;
+	border: 2px solid rgb(143, 18, 18);
+	font-weight: 700;
+	border-radius: 4px;
+	width: 80px;
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+.task-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 15px auto;
+	gap: 5px;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.task-list_element {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 40px;
+}
+.task-list_text {
+	padding: 0;
+	margin: 0;
+	flex-grow: 1;
+	border: 1px solid rgb(65, 0, 0);
+	display: inline-flex;
+	border-radius: 4px;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(253, 255, 233);
+}
+.task-list_rm-btn {
+}
+.btn:hover {
+	border-color: rgb(184, 113, 113);
+	cursor: pointer;
+}
+.btn:active {
+	border-color: rgb(119, 71, 71);
+	background-color: rgb(177, 0, 0);
+}
+.completed-task {
+	text-decoration: line-through;
+}
+.completed-task::after {
+	content: "✔";
 }
