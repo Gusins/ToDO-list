@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build --base=/vanilla-app-template/",
     "preview": "vite preview",
-		"test": "bash test.sh"
+		"push": "bash push.sh"
   },
   "devDependencies": {
     "vite": "^4.5.2",
