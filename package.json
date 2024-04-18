@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build --base=/vanilla-app-template/",
     "preview": "vite preview",
-		"test": "./test.sh"
+		"test": "bash test.sh"
   },
   "devDependencies": {
     "vite": "^4.5.2",
