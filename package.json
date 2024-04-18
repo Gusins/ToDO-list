@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "testScript",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/testScript/",
     "preview": "vite preview",
 		"push": "bash push.sh"
   },
@@ -13,7 +13,7 @@
     "vite": "^4.5.2",
     "glob": "^8.1.0"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Alexander Volokhov",
   "license": "ISC",
   "dependencies": {
     "vite-plugin-full-reload": "^1.0.5",
