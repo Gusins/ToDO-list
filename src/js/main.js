@@ -1,11 +1,14 @@
-import { list } from './render';
+import { htmlRender } from './render';
 
 const formTask = document.querySelector('.form');
 const KEY = 'key-task';
-const taskArr = JSON.parse(localStorage.getItem(KEY)) ?? [];
+let taskArr = JSON.parse(localStorage.getItem(KEY)) ?? [];
+const list = document.querySelector(".task-list");
 htmlRender(taskArr);
+
 formTask.addEventListener('submit', (e) => {
 	e.preventDefault();
+	if (!e.target.taskInput.value) { return; }
 	const taskObj = {
 		id: Date.now(),
 		taskName: e.target.taskInput.value,
@@ -15,16 +18,29 @@ formTask.addEventListener('submit', (e) => {
 	localStorage.setItem(KEY, JSON.stringify(taskArr));
 	htmlRender(taskArr);
 
-
-
-
 	e.target.taskInput.value = "";
 });
 
+list.addEventListener('click', itemInter);
 
+function itemInter(e) {
+	const idx = taskArr.findIndex(({ id }) => Number(id) === Number(e.target.parentElement.id));
+	if (e.target.className.includes('task-list_text')) {
+		if (e.target.className.includes('completed-task')) {
+			e.target.classList.remove('completed-task');
+			taskArr[idx].checked = false;
+		} else {
+			e.target.classList.add('completed-task');
+			taskArr[idx].checked = true;
+		}
+		localStorage.setItem(KEY, JSON.stringify(taskArr));
 
-function htmlRender(taskArr) {
-	list.innerHTML = taskArr.map(({ id, taskName, checked }) => `<li class="task-list_element" id="${id}">
-	<p class="task-list_text ${checked ? "completed-task" : ""}">${taskName}</p><button	class="task-list_rm-btn btn">x</button></li>`).join('');
+	} else if (e.target.className.includes('task-list_rm-btn')) {
+		taskArr.splice(idx, 1);
+		localStorage.setItem(KEY, JSON.stringify(taskArr));
+		htmlRender(taskArr);
+	} else {
+		return;
+	}
 }
 
