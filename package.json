@@ -1,11 +1,11 @@
 {
-  "name": "testScript",
+  "name": "ToDO-list",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --base=/testScript/",
+    "build": "vite build --base=/ToDO-list/",
     "preview": "vite preview",
 		"p": "bash push.sh"
   },
