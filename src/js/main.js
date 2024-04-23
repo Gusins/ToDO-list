@@ -29,6 +29,8 @@ function itemInter(e) {
 		if (e.target.className.includes('completed-task')) {
 			e.target.classList.remove('completed-task');
 			taskArr[idx].checked = false;
+			const elementToMove = taskArr.splice(idx, 1)[0];
+			taskArr.push(elementToMove);
 		} else {
 			e.target.classList.add('completed-task');
 			taskArr[idx].checked = true;
