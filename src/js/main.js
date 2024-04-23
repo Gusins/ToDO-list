@@ -32,9 +32,11 @@ function itemInter(e) {
 		} else {
 			e.target.classList.add('completed-task');
 			taskArr[idx].checked = true;
+			const elementToMove = taskArr.splice(idx, 1)[0];
+			taskArr.unshift(elementToMove);
 		}
 		localStorage.setItem(KEY, JSON.stringify(taskArr));
-
+		htmlRender(taskArr);
 	} else if (e.target.className.includes('task-list_rm-btn')) {
 		taskArr.splice(idx, 1);
 		localStorage.setItem(KEY, JSON.stringify(taskArr));
