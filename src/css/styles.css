@@ -60,6 +60,7 @@ body {
 	min-height: 40px;
 	padding: 5px 10px;
 	text-align: center;
+  word-break: break-all;
 }
 .task-list_text:active {
 	background-color: rgb(213, 214, 197);
