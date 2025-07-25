@@ -1,4 +1,4 @@
-cd /d/programmersStuf/testScript
+cd /f/Programming/ToDO-list
 git add .
 echo "Введи комміт:"
 read commit_message
